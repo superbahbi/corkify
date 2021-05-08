@@ -81,6 +81,10 @@ buck-out/
 .expo/*
 .expo
 .env
+.env.production
+.expo-shared/*
+.firebase/*
+android/*
 web-build/
 
 # @end expo-cli
