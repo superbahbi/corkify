@@ -84,6 +84,11 @@ buck-out/
 .env.production
 .expo-shared/*
 .firebase/*
+functions/.runtimeconfig.json
+functions/package-lock.json
+src/api/config.js
+package-lock.json
+yarn.lock
 android/*
 web-build/
 
