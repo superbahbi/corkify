@@ -11,7 +11,6 @@ import { Button } from "../../components";
 import { nowTheme } from "../../constants";
 import { Context as OfferContext } from "../context/OfferContext";
 import { Context as AuthContext } from "../context/AuthContext";
-import CachedImage from "react-native-expo-cached-image";
 const { width, height } = Dimensions.get("screen");
 
 function truncator(numToTruncate, intDecimalPlaces) {
@@ -57,7 +56,7 @@ const CartScreen = ({ navigation }) => {
           <Text style={styles.title}>Pay Corkify</Text>
           <Text style={styles.price}>${finalPrice}</Text>
           <Block row flex style={styles.subtotal}>
-            <CachedImage style={styles.image} source={{ uri: offer.image }} />
+            <Image style={styles.image} source={{ uri: offer.image }} />
             <Text style={styles.product}>
               {offer.year +
                 " " +

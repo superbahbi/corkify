@@ -51,9 +51,11 @@ const DismissKeyboard = ({ children }) => (
 
 const LoginScreen = ({ navigation }) => {
   useStatusBar("dark-content");
-  const { state: authState, AuthLogIn, clearErrorMessage } = useContext(
-    AuthContext
-  );
+  const {
+    state: authState,
+    AuthLogIn,
+    clearErrorMessage,
+  } = useContext(AuthContext);
   const {
     state: userState,
     addUserData,
@@ -114,11 +116,8 @@ const LoginScreen = ({ navigation }) => {
     try {
       // Logging in with email and password
       auth = await loginWithEmail(email, password);
-      const {
-        accessToken,
-        expirationTime,
-        refreshToken,
-      } = auth.user.toJSON().stsTokenManager;
+      const { accessToken, expirationTime, refreshToken } =
+        auth.user.toJSON().stsTokenManager;
 
       // Saving auth data to context
       await AuthLogIn(
@@ -140,12 +139,12 @@ const LoginScreen = ({ navigation }) => {
       });
     } catch (error) {
       console.log("error" + error);
+      return;
     } finally {
       console.log("Successfully logged in");
-
       setLoading(false);
       // auth && user && navigation.navigate("Offer");
-      auth && user && navigation.goBack()
+      auth && user && navigation.goBack();
     }
   }
   return (

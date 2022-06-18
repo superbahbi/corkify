@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { withNavigation } from "@react-navigation/compat";
 import PropTypes from "prop-types";
-import { StyleSheet, ScrollView, ActivityIndicator } from "react-native";
+import { StyleSheet, ScrollView, Image } from "react-native";
 import { Block, Text } from "galio-framework";
 import ScaleBar from "./ScaleBar";
 import { nowTheme } from "../constants";
-import { Image } from "react-native-expo-image-cache";
 const Offer = ({
   navigation,
   item,
@@ -17,10 +16,6 @@ const Offer = ({
   ctaRight,
   titleStyle,
 }) => {
-  const preview = {
-    uri:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
-  };
   const imageStyles = [
     full ? styles.fullImage : styles.horizontalImage,
     imageStyle,
@@ -49,7 +44,9 @@ const Offer = ({
         <Block flex style={imgContainer}>
           <Image
             style={{ height: 400, width: 400 }}
-            {...{ preview, uri: item.image }}
+            source={{
+              uri: item.image,
+            }}
           />
         </Block>
 
@@ -60,7 +57,10 @@ const Offer = ({
                 <Text style={styles.cardTitle} color={nowTheme.COLORS.PRIMARY}>
                   {item.year}{" "}
                 </Text>
-                <Text style={styles.cardTitle} color={nowTheme.COLORS.SECONDARY}>
+                <Text
+                  style={styles.cardTitle}
+                  color={nowTheme.COLORS.SECONDARY}
+                >
                   {item.title}
                 </Text>
               </Text>

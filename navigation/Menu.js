@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ScrollView, StyleSheet, Dimensions, Platform } from "react-native";
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "expo-haptics";
 import { Block, theme } from "galio-framework";
 import { useSafeArea } from "react-native-safe-area-context";
 import { DrawerItem as DrawerCustomItem, Icon } from "../components";
@@ -22,7 +22,9 @@ function CustomDrawerContent({
   const insets = useSafeArea();
   const { state: authState } = useContext(AuthContext);
 
-  const screens = ["Offer", "Invite", "Test"];
+  const screens = [];
+  screens.push("Offer");
+  screens.push("Invite");
   if (authState?.uid) {
     screens.push("Account");
     screens.push("Logout");

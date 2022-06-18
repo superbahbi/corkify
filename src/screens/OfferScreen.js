@@ -19,9 +19,12 @@ const OfferScreen = ({ navigation }) => {
   const [isLoading, setLoading] = useState(true);
   const { state: authState } = useContext(AuthContext);
   const { state: userState } = useContext(UserContext);
-  const { state: offerState, addOffer, addToCart, resetData } = useContext(
-    OfferContext
-  );
+  const {
+    state: offerState,
+    addOffer,
+    addToCart,
+    resetData,
+  } = useContext(OfferContext);
   console.log("isLoading: " + isLoading);
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", async () => {
@@ -37,6 +40,7 @@ const OfferScreen = ({ navigation }) => {
           addOffer(offer);
           setLoading(false);
         }
+        console.log(offer);
       }
     });
     return unsubscribe;

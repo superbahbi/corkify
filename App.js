@@ -2,7 +2,7 @@ import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import { Asset } from "expo-asset";
 import React, { useState } from "react";
-import { Image } from "react-native";
+import { Image, LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { Block, GalioProvider } from "galio-framework";
 import Screens from "./navigation/Screens";
@@ -11,7 +11,8 @@ import { Provider as AuthProvider } from "./src/context/AuthContext";
 import { Provider as UserProvider } from "./src/context/UserContext";
 import { Provider as OfferProvider } from "./src/context/OfferContext";
 import { navigationRef } from "./src/navigationRef";
-
+LogBox.ignoreLogs(["Warning: ..."]); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 // cache app images
 const assetImages = [
   Images.Onboarding,
@@ -46,7 +47,6 @@ export default function App() {
       "montserrat-regular": require("./assets/font/Montserrat-Regular.ttf"),
       "montserrat-bold": require("./assets/font/Montserrat-Bold.ttf"),
     });
-
 
     setFontLoading(true);
     return Promise.all([...cacheImages(assetImages)]);
