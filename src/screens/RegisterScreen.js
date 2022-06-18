@@ -112,7 +112,7 @@ const RegistrationScreen = ({ navigation }) => {
             >
               <FormField
                 placeholder="Full name"
-                leftIcon="face-profile"
+                leftIcon="account"
                 name="name"
                 autoCapitalize="none"
                 keyboardType="default"
@@ -159,6 +159,7 @@ const RegistrationScreen = ({ navigation }) => {
                     color: nowTheme.COLORS.DEFAULT,
                     fontFamily: "montserrat-regular",
                   }}
+                  isChecked
                   label="I accept the Terms of Service and Privacy Policy."
                 />
                 <Checkbox
@@ -170,6 +171,7 @@ const RegistrationScreen = ({ navigation }) => {
                     color: nowTheme.COLORS.DEFAULT,
                     fontFamily: "montserrat-regular",
                   }}
+                  isChecked
                   label="I'd like to receive updates via email about Corkify."
                 />
               </Block>
