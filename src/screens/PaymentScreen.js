@@ -25,17 +25,20 @@ const { width, height } = Dimensions.get("screen");
 
 const PaymentScreen = ({ navigation }) => {
   const { state: authState } = useContext(AuthContext);
-  const { state: userState, getStripeCard, getStripeSessionID } = useContext(
-    UserContext
-  );
+  const {
+    state: userState,
+    getStripeCard,
+    getStripeSessionID,
+  } = useContext(UserContext);
   const { state: offerState, addPayment } = useContext(OfferContext);
   const [isSelected, setSelected] = useState(userState.payment.data[0].id);
-  // useEffect(() => {
-  //   const unsubscribe = navigation.addListener("focus", async () => {
-  //     await getStripeCard(userState.user.stripe_id, authState.token);
-  //   });
-  //   return unsubscribe;
-  // }, [navigation]);
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", async () => {
+      await getStripeCard(userState.user.stripe_id, authState.token);
+    });
+    return unsubscribe;
+  }, [navigation]);
   useStatusBar("dark-content");
   return (
     <SafeAreaView style={styles.container}>
@@ -83,7 +86,7 @@ const PaymentScreen = ({ navigation }) => {
               {isSelected == item.id && (
                 <Block>
                   <Button
-                    onPress={ async () => {
+                    onPress={async () => {
                       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
                       await addPayment(isSelected);
                       navigation.navigate("Test");

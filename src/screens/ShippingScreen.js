@@ -71,7 +71,7 @@ function ShippingScreen({ navigation }) {
                   <Button
                     onPress={() => {
                       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-                      addShipping(userState.user.shipping[isSelected]);
+                      addShipping(userState.user.shipping[item.id]);
                       navigation.navigate("Payment");
                     }}
                     full

@@ -20,15 +20,12 @@ const addOffer = (dispatch) => async (data) => {
   dispatch({ type: "fetch_offer", payload: data });
 };
 const addToCart = (dispatch) => async (data) => {
-  console.log(true);
   dispatch({ type: "add_to_cart", payload: true });
 };
 const addShipping = (dispatch) => async (data) => {
-  console.log(data);
   dispatch({ type: "add_shipping", payload: data });
 };
 const addPayment = (dispatch) => async (data) => {
-  console.log(data);
   dispatch({ type: "add_payment", payload: data });
 };
 const resetData = (dispatch) => async () => {

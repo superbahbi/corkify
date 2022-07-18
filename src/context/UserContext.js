@@ -36,7 +36,6 @@ const addShippingData = (dispatch) => async (uid, values) => {
   // dispatch({ type: "shipping_data" });
 };
 const getStripeCard = (dispatch) => async (customer_id, token) => {
-  console.log(API_URL);
   const url = `${API_URL}/customers/${customer_id}`;
   const payment_method = await fetch(url, {
     method: "GET",

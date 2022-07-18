@@ -54,9 +54,9 @@ app.post("/createSessionID", async (req, res) => {
     mode: "setup",
     customer: customer_id,
     success_url:
-      "http://192.168.1.101:5001/corkify-41a8d/us-central1/api/success?sc_checkout=success&sc_sid={CHECKOUT_SESSION_ID}",
+      "https://us-central1-corkify-41a8d.cloudfunctions.net/api/success?sc_checkout=success&sc_sid={CHECKOUT_SESSION_ID}",
     cancel_url:
-      "http://192.168.1.101:5001/corkify-41a8d/us-central1/api/cancel?sc_checkout=cancel",
+      "https://us-central1-corkify-41a8d.cloudfunctions.net/api/cancel?sc_checkout=cancel",
   });
 
   res.json({ id: session.id });

@@ -25,7 +25,6 @@ const OfferScreen = ({ navigation }) => {
     addToCart,
     resetData,
   } = useContext(OfferContext);
-  console.log("isLoading: " + isLoading);
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", async () => {
       if (!offerState?.id) {
@@ -40,7 +39,6 @@ const OfferScreen = ({ navigation }) => {
           addOffer(offer);
           setLoading(false);
         }
-        console.log(offer);
       }
     });
     return unsubscribe;
