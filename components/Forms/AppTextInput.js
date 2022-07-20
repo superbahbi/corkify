@@ -24,13 +24,13 @@ export default function AppTextInput({
     : nowTheme.COLORS.PRIMARY;
   return (
     <Block>
-      <Block row style={{marginVertical: 10}}>
-        <Block style={{ alignSelf: "center"}}>
+      <Block row style={{ marginVertical: 10 }}>
+        <Block style={{ alignSelf: "center" }}>
           {leftIcon && (
             <MaterialCommunityIcons
               name={leftIcon}
               size={20}
-              color={nowTheme.COLORS.BORDER}
+              color={nowTheme.COLORS.MUTED}
               style={styles.icon}
             />
           )}
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     color: nowTheme.COLORS.MUTED,
     borderBottomWidth: 1,
     paddingVertical: 10,
-    marginLeft: 10
+    marginLeft: 10,
   },
   icon: {
     marginRight: 5,

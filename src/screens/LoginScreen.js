@@ -143,8 +143,8 @@ const LoginScreen = ({ navigation }) => {
     } finally {
       console.log("Successfully logged in");
       setLoading(false);
-      // auth && user && navigation.navigate("Offer");
-      auth && user && navigation.goBack();
+      auth && user && navigation.navigate("Offer");
+      // auth && user && navigation.goBack();
     }
   }
   return (

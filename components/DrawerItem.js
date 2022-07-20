@@ -30,11 +30,41 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
           />
         );
+      case "Account":
+        return (
+          <Icon
+            name="account-circle"
+            family="MaterialIcons"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
       case "Terms":
         return (
           <Icon
             name="paper"
             family="NowExtra"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
+      case "Privacy":
+        return (
+          <Icon
+            name="privacy-tip"
+            family="MaterialIcons"
+            size={18}
+            color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+            style={{ opacity: 0.5 }}
+          />
+        );
+      case "Accessibility":
+        return (
+          <Icon
+            name="accessibility"
+            family="MaterialIcons"
             size={18}
             color={focused ? nowTheme.COLORS.PRIMARY : "white"}
             style={{ opacity: 0.5 }}
