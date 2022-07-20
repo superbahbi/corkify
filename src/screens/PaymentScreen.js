@@ -31,51 +31,7 @@ const PaymentScreen = ({ navigation }) => {
     getStripeSessionID,
   } = useContext(UserContext);
   const { state: offerState, addPayment } = useContext(OfferContext);
-  const [isSelected, setSelected] = useState({
-    billing_details: {
-      address: {
-        city: null,
-        country: "US",
-        line1: null,
-        line2: null,
-        postal_code: "93446",
-        state: null,
-      },
-      email: "superbahbi@gmail.com",
-      name: "Bahbi Lee Amex",
-      phone: null,
-    },
-    card: {
-      brand: "amex",
-      checks: {
-        address_line1_check: null,
-        address_postal_code_check: "pass",
-        cvc_check: "pass",
-      },
-      country: "US",
-      exp_month: 10,
-      exp_year: 2029,
-      fingerprint: "rLlwza35S57TPUnW",
-      funding: "credit",
-      generated_from: null,
-      last4: "8431",
-      networks: {
-        available: Array["amex"],
-        preferred: null,
-      },
-      three_d_secure_usage: {
-        supported: true,
-      },
-      wallet: null,
-    },
-    created: 1619401618,
-    customer: "cus_JMaOU8xVXbScTD",
-    id: "pm_1IkJXKA9dfpX7QKv02CGYaxl",
-    livemode: false,
-    metadata: {},
-    object: "payment_method",
-    type: "card",
-  });
+  const [isSelected, setSelected] = useState("");
 
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", async () => {
