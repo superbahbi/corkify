@@ -36,7 +36,7 @@ const addShippingData = (dispatch) => async (uid, values) => {
   // dispatch({ type: "shipping_data" });
 };
 const getStripeCard = (dispatch) => async (customer_id, token) => {
-  const url = `${API_URL}/customers/${customer_id}`;
+  const url = `https://us-central1-corkify-41a8d.cloudfunctions.net/api/customers/${customer_id}`;
   const payment_method = await fetch(url, {
     method: "GET",
     headers: {
@@ -47,7 +47,7 @@ const getStripeCard = (dispatch) => async (customer_id, token) => {
   dispatch({ type: "payment_method", payload: payment_method });
 };
 const getStripeSessionID = (dispatch) => async (token, data) => {
-  const url = `${API_URL}/createSessionID`;
+  const url = `https://us-central1-corkify-41a8d.cloudfunctions.net/api/createSessionID`;
   const session = await fetch(url, {
     method: "POST",
     headers: {
