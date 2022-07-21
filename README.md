@@ -62,17 +62,17 @@
 
 ## Screenshots
 
-Login              |  Signup                | Forgot Password               
-:-------------------------:|:-------------------------:|:-------------------------:
-![](https://user-images.githubusercontent.com/1689092/180124184-feb2e4c2-0836-4a87-ab03-8f807b7ce83c.PNG)|![](https://user-images.githubusercontent.com/1689092/180124234-a4834deb-8cb9-402f-b3d4-7aefba43d28a.PNG)|![](https://user-images.githubusercontent.com/1689092/180124277-486f0084-4ee3-47a4-97de-bbc03fe95b33.PNG)|
+| Login |  Signup | Forgot Password |
+| --- | --- | --- |
+|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124184-feb2e4c2-0836-4a87-ab03-8f807b7ce83c.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124234-a4834deb-8cb9-402f-b3d4-7aefba43d28a.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124277-486f0084-4ee3-47a4-97de-bbc03fe95b33.PNG">|
 
-Offer                |  Summary                | Shipping             
-:-------------------------:|:-------------------------:|:-------------------------:
-![](https://user-images.githubusercontent.com/1689092/180124507-f9c11707-ba30-4397-a993-19448cbd342e.PNG)|![](https://user-images.githubusercontent.com/1689092/180124344-ef1209f0-7b2f-47f0-91fe-a5451f71540e.PNG)|![](https://user-images.githubusercontent.com/1689092/180124340-3341ab4a-f61c-43d9-a57d-e919cd09cceb.PNG)|
-  
-Payment               |  New Payment                | Splash             
-:-------------------------:|:-------------------------:|:-------------------------:
-![](https://user-images.githubusercontent.com/1689092/180124336-419498eb-8cd2-4ed7-a72a-45ca7ad217f7.PNG)|![](https://user-images.githubusercontent.com/1689092/180124346-99330119-b0a4-47e3-a33b-0f0f7d1b8824.PNG)|![](https://user-images.githubusercontent.com/1689092/180124342-02e83361-3b85-4fea-bb18-d7a2f0e831d4.PNG)|
+| Offer |  Summary | Shipping |
+| --- | --- | --- |
+|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124507-f9c11707-ba30-4397-a993-19448cbd342e.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124344-ef1209f0-7b2f-47f0-91fe-a5451f71540e.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124340-3341ab4a-f61c-43d9-a57d-e919cd09cceb.PNG">|
+
+| Payment |  New Payment | Splash |
+| --- | --- | --- |
+|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124336-419498eb-8cd2-4ed7-a72a-45ca7ad217f7.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124346-99330119-b0a4-47e3-a33b-0f0f7d1b8824.PNG">|<img height="600" src="https://user-images.githubusercontent.com/1689092/180124342-02e83361-3b85-4fea-bb18-d7a2f0e831d4.PNG">|
   
 
 ### Built With
