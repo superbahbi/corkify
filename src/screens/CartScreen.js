@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import CachedImage from "react-native-expo-cached-image";
 import {
   ScrollView,
   StyleSheet,
@@ -56,7 +57,7 @@ const CartScreen = ({ navigation }) => {
           <Text style={styles.title}>Pay Corkify</Text>
           <Text style={styles.price}>${finalPrice}</Text>
           <Block row flex style={styles.subtotal}>
-            <Image style={styles.image} source={{ uri: offer.image }} />
+            <CachedImage style={styles.image} source={{ uri: offer.image }} />
             <Text style={styles.product}>
               {offer.year +
                 " " +

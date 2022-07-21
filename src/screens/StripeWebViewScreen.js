@@ -6,8 +6,8 @@ import { nowTheme } from "../../constants";
 const StripeWebViewScreen = ({ navigation, route }) => {
   const { session } = route.params;
   const options = {
-    htmlContentLoading: '<h1 id="sc-loading">Loading...</h1>',
-    htmlContentError: '<div id="sc-error-message"></div>',
+    htmlContentLoading: "",
+    htmlContentError: "",
     htmlContentHead: "",
   };
   return (

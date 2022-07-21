@@ -52,9 +52,7 @@ const InviteScreen = (props) => {
           style={{ paddingHorizontal: theme.SIZES.BASE, paddingTop: 100 }}
         >
           <Block flex row>
-            <Text size={16} style={styles.title}>
-              Invite
-            </Text>
+            <Text size={16} style={styles.title}></Text>
           </Block>
         </Block>
       </ScrollView>

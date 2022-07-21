@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { withNavigation } from "@react-navigation/compat";
 import PropTypes from "prop-types";
-import { StyleSheet, ScrollView, Image } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import { Block, Text } from "galio-framework";
 import ScaleBar from "./ScaleBar";
 import { nowTheme } from "../constants";
+import { Image } from "react-native-expo-image-cache";
 const Offer = ({
   navigation,
   item,
@@ -26,6 +27,11 @@ const Offer = ({
     styles.imageContainer,
     horizontal ? styles.horizontalStyles : styles.verticalStyles,
   ];
+  const preview = {
+    uri: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+  };
+  const uri = item.image;
+
   var active1, active2, active3;
   if (item.body == 1) {
     active1 = "true";
@@ -42,12 +48,7 @@ const Offer = ({
     >
       <Block row={horizontal} card key={item} flex style={cardContainer}>
         <Block flex style={imgContainer}>
-          <Image
-            style={{ height: 400, width: 400 }}
-            source={{
-              uri: item.image,
-            }}
-          />
+          <Image style={{ height: 400, width: 400 }} {...{ preview, uri }} />
         </Block>
 
         <Block flex space="between" style={styles.cardDescription}>
