@@ -52,11 +52,11 @@
 # To-Do
 - [x] Login
 - [x] Register
-- [ ] Reset password
+- [x] Reset password
 - [x] Offer
 - [x] Summary
-- [x] Shipping
-- [x] Payment
+- [ ] Shipping
+- [ ] Payment
 - [ ] Checkout
 
 
