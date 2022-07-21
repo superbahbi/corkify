@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/superbahbi/twitter-clone-web">
+  <a href="https://github.com/superbahbi/corkify">
     <img src="https://user-images.githubusercontent.com/1689092/180121653-5ba8bebb-38b1-4a0e-8fe0-a7d2caf258ba.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -92,7 +92,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/superbahbi/twitter-clone-web.git
+   git clone https://github.com/superbahbi/corkify.git
    ```
 2. Install NPM packages
    ```sh
