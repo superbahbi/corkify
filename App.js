@@ -14,21 +14,7 @@ import { navigationRef } from "./src/navigationRef";
 LogBox.ignoreLogs(["Warning: ..."]); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 // cache app images
-const assetImages = [
-  Images.Onboarding,
-  Images.Logo,
-  Images.Pro,
-  Images.NowLogo,
-  Images.iOSLogo,
-  Images.androidLogo,
-  Images.ProfilePicture,
-  Images.CreativeTimLogo,
-  Images.InvisionLogo,
-  Images.RegisterBackground,
-  Images.ProfileBackground,
-  Images.CardFront,
-  Images.CardBack,
-];
+const assetImages = [Images.CardFront, Images.CardBack];
 function cacheImages(images) {
   return images.map((image) => {
     if (typeof image === "string") {
